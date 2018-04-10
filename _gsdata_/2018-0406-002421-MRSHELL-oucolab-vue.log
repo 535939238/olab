@@ -1,0 +1,155 @@
+2018-04-06 00:24:23: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:23: -- 分析开始 User Command
+2018-04-06 00:24:24: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:24: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:25: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:26: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:26: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:27: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:27: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:28: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:28: 变更：81， 冲突：， 复制时间：， 复制状态：， 错误： , All: 461
+2018-04-06 00:24:28: Left to Right: Copy File: 49 Delete File: 32 
+2018-04-06 00:24:28: -- 分析已结束。历时 00:00:07, 速度： 15 文件/秒
+2018-04-06 00:24:28: 
+2018-04-06 00:24:47: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:48: == 同步开始由 User Command
+2018-04-06 00:24:48: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:49: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:50: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/css/app.08429ade72bc9cc98362f89df956abe7.css'
+2018-04-06 00:24:50: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/css/app.08429ade72bc9cc98362f89df956abe7.css.map'
+2018-04-06 00:24:50: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/0.86976167f1277917d8b8.js'
+2018-04-06 00:24:50: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/0.86976167f1277917d8b8.js.map'
+2018-04-06 00:24:50: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/1.e99715563693c6542d90.js'
+2018-04-06 00:24:51: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/1.e99715563693c6542d90.js.map'
+2018-04-06 00:24:51: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/10.c0cd77f86baac127a860.js'
+2018-04-06 00:24:51: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/10.c0cd77f86baac127a860.js.map'
+2018-04-06 00:24:51: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/11.7155c6b1658b4e132e24.js'
+2018-04-06 00:24:51: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/11.7155c6b1658b4e132e24.js.map'
+2018-04-06 00:24:51: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/13.635540bb160716537f7e.js'
+2018-04-06 00:24:52: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/13.635540bb160716537f7e.js.map'
+2018-04-06 00:24:52: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/14.882161d5a15d50a10cc6.js'
+2018-04-06 00:24:52: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/14.882161d5a15d50a10cc6.js.map'
+2018-04-06 00:24:52: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/15.174399f7503636a10ed2.js'
+2018-04-06 00:24:52: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/15.174399f7503636a10ed2.js.map'
+2018-04-06 00:24:52: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/3.4dc021e98ce44758b79b.js'
+2018-04-06 00:24:53: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/3.4dc021e98ce44758b79b.js.map'
+2018-04-06 00:24:53: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/4.0c115ea5fe55349cb8fd.js'
+2018-04-06 00:24:53: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/4.0c115ea5fe55349cb8fd.js.map'
+2018-04-06 00:24:53: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/5.2631fad9d1149bb41b99.js'
+2018-04-06 00:24:53: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/5.2631fad9d1149bb41b99.js.map'
+2018-04-06 00:24:53: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/6.b1ca58a6320faa7ec046.js'
+2018-04-06 00:24:54: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/6.b1ca58a6320faa7ec046.js.map'
+2018-04-06 00:24:54: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/9.a62e73c3b9b0dd38f784.js'
+2018-04-06 00:24:54: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/9.a62e73c3b9b0dd38f784.js.map'
+2018-04-06 00:24:54: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/app.7580fd022ead62dabea9.js'
+2018-04-06 00:24:54: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/app.7580fd022ead62dabea9.js.map'
+2018-04-06 00:24:54: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/manifest.48f019ca2995766807c7.js'
+2018-04-06 00:24:55: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/manifest.48f019ca2995766807c7.js.map'
+2018-04-06 00:24:55: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/vendor.47b986a5f518b6728082.js'
+2018-04-06 00:24:55: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/vendor.47b986a5f518b6728082.js.map'
+2018-04-06 00:24:55: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:57: 覆盖复制 'D:/Project/node/clipro1/dist/index.html' -> 'ftps://oucolab.cn/public/newver/dist/index.html'
+2018-04-06 00:24:57: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:58: 新建复制 'D:/Project/node/clipro1/dist/static/css/app.2f9adc34bdf5970eb9ddbb210d1e1d57.css' -> 'ftps://oucolab.cn/public/newver/dist/static/css/app.2f9adc34bdf5970eb9ddbb210d1e1d57.css'
+2018-04-06 00:24:58: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:24:59: 新建复制 'D:/Project/node/clipro1/dist/static/css/app.2f9adc34bdf5970eb9ddbb210d1e1d57.css.map' -> 'ftps://oucolab.cn/public/newver/dist/static/css/app.2f9adc34bdf5970eb9ddbb210d1e1d57.css.map'
+2018-04-06 00:24:59: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:00: 覆盖复制 'D:/Project/node/clipro1/dist/static/images/bg2.jpg' -> 'ftps://oucolab.cn/public/newver/dist/static/images/bg2.jpg'
+2018-04-06 00:25:00: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:02: 覆盖复制 'D:/Project/node/clipro1/dist/static/images/bg3.png' -> 'ftps://oucolab.cn/public/newver/dist/static/images/bg3.png'
+2018-04-06 00:25:02: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:03: 覆盖复制 'D:/Project/node/clipro1/dist/static/images/default.png' -> 'ftps://oucolab.cn/public/newver/dist/static/images/default.png'
+2018-04-06 00:25:03: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:05: 覆盖复制 'D:/Project/node/clipro1/dist/static/images/loading.png' -> 'ftps://oucolab.cn/public/newver/dist/static/images/loading.png'
+2018-04-06 00:25:05: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:06: 覆盖复制 'D:/Project/node/clipro1/dist/static/images/logo.png' -> 'ftps://oucolab.cn/public/newver/dist/static/images/logo.png'
+2018-04-06 00:25:06: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:07: 新建复制 'D:/Project/node/clipro1/dist/static/js/0.7f3664a8f35a39085d0f.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/0.7f3664a8f35a39085d0f.js'
+2018-04-06 00:25:07: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:08: 新建复制 'D:/Project/node/clipro1/dist/static/js/0.7f3664a8f35a39085d0f.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/0.7f3664a8f35a39085d0f.js.map'
+2018-04-06 00:25:08: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:09: 新建复制 'D:/Project/node/clipro1/dist/static/js/1.a835e306c0e9f897689a.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/1.a835e306c0e9f897689a.js'
+2018-04-06 00:25:09: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:10: 新建复制 'D:/Project/node/clipro1/dist/static/js/1.a835e306c0e9f897689a.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/1.a835e306c0e9f897689a.js.map'
+2018-04-06 00:25:10: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:11: 新建复制 'D:/Project/node/clipro1/dist/static/js/10.65dbdf4fd73909c06001.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/10.65dbdf4fd73909c06001.js'
+2018-04-06 00:25:11: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:12: 新建复制 'D:/Project/node/clipro1/dist/static/js/10.65dbdf4fd73909c06001.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/10.65dbdf4fd73909c06001.js.map'
+2018-04-06 00:25:12: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:13: 新建复制 'D:/Project/node/clipro1/dist/static/js/11.c0d5c790502b3223fb0c.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/11.c0d5c790502b3223fb0c.js'
+2018-04-06 00:25:13: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:14: 新建复制 'D:/Project/node/clipro1/dist/static/js/11.c0d5c790502b3223fb0c.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/11.c0d5c790502b3223fb0c.js.map'
+2018-04-06 00:25:14: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:15: 覆盖复制 'D:/Project/node/clipro1/dist/static/js/12.383ea63cee4aba68aa2f.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/12.383ea63cee4aba68aa2f.js'
+2018-04-06 00:25:15: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:16: 覆盖复制 'D:/Project/node/clipro1/dist/static/js/12.383ea63cee4aba68aa2f.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/12.383ea63cee4aba68aa2f.js.map'
+2018-04-06 00:25:16: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:17: 新建复制 'D:/Project/node/clipro1/dist/static/js/13.d511b76628e1cb9f4dfd.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/13.d511b76628e1cb9f4dfd.js'
+2018-04-06 00:25:17: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:18: 新建复制 'D:/Project/node/clipro1/dist/static/js/13.d511b76628e1cb9f4dfd.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/13.d511b76628e1cb9f4dfd.js.map'
+2018-04-06 00:25:18: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:19: 新建复制 'D:/Project/node/clipro1/dist/static/js/14.5d2f23cfca9adcaf08fa.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/14.5d2f23cfca9adcaf08fa.js'
+2018-04-06 00:25:19: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:20: 新建复制 'D:/Project/node/clipro1/dist/static/js/14.5d2f23cfca9adcaf08fa.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/14.5d2f23cfca9adcaf08fa.js.map'
+2018-04-06 00:25:20: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:21: 新建复制 'D:/Project/node/clipro1/dist/static/js/15.7f61473b4eebf0ae36a3.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/15.7f61473b4eebf0ae36a3.js'
+2018-04-06 00:25:21: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:22: 新建复制 'D:/Project/node/clipro1/dist/static/js/15.7f61473b4eebf0ae36a3.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/15.7f61473b4eebf0ae36a3.js.map'
+2018-04-06 00:25:22: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:23: 新建复制 'D:/Project/node/clipro1/dist/static/js/16.8e5ff1ca39fd5b188683.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/16.8e5ff1ca39fd5b188683.js'
+2018-04-06 00:25:23: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:23: 新建复制 'D:/Project/node/clipro1/dist/static/js/16.8e5ff1ca39fd5b188683.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/16.8e5ff1ca39fd5b188683.js.map'
+2018-04-06 00:25:24: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:25: 覆盖复制 'D:/Project/node/clipro1/dist/static/js/2.9a78702c673117b7b5d3.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/2.9a78702c673117b7b5d3.js'
+2018-04-06 00:25:25: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:26: 覆盖复制 'D:/Project/node/clipro1/dist/static/js/2.9a78702c673117b7b5d3.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/2.9a78702c673117b7b5d3.js.map'
+2018-04-06 00:25:26: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:27: 新建复制 'D:/Project/node/clipro1/dist/static/js/3.6b8a2367ce49cfa81a75.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/3.6b8a2367ce49cfa81a75.js'
+2018-04-06 00:25:27: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:29: 新建复制 'D:/Project/node/clipro1/dist/static/js/3.6b8a2367ce49cfa81a75.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/3.6b8a2367ce49cfa81a75.js.map'
+2018-04-06 00:25:29: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:30: 新建复制 'D:/Project/node/clipro1/dist/static/js/4.e81fcdede64170b1029b.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/4.e81fcdede64170b1029b.js'
+2018-04-06 00:25:30: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:31: 新建复制 'D:/Project/node/clipro1/dist/static/js/4.e81fcdede64170b1029b.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/4.e81fcdede64170b1029b.js.map'
+2018-04-06 00:25:31: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:32: 新建复制 'D:/Project/node/clipro1/dist/static/js/5.ccd95d86d0684c02f857.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/5.ccd95d86d0684c02f857.js'
+2018-04-06 00:25:32: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:33: 新建复制 'D:/Project/node/clipro1/dist/static/js/5.ccd95d86d0684c02f857.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/5.ccd95d86d0684c02f857.js.map'
+2018-04-06 00:25:33: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:34: 新建复制 'D:/Project/node/clipro1/dist/static/js/6.92780ddbfc4bb1434675.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/6.92780ddbfc4bb1434675.js'
+2018-04-06 00:25:35: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:36: 新建复制 'D:/Project/node/clipro1/dist/static/js/6.92780ddbfc4bb1434675.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/6.92780ddbfc4bb1434675.js.map'
+2018-04-06 00:25:36: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:37: 覆盖复制 'D:/Project/node/clipro1/dist/static/js/7.ce17c4807701823cd2b6.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/7.ce17c4807701823cd2b6.js'
+2018-04-06 00:25:37: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:38: 覆盖复制 'D:/Project/node/clipro1/dist/static/js/7.ce17c4807701823cd2b6.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/7.ce17c4807701823cd2b6.js.map'
+2018-04-06 00:25:38: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:39: 覆盖复制 'D:/Project/node/clipro1/dist/static/js/8.2a7ac79761ddcaf52164.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/8.2a7ac79761ddcaf52164.js'
+2018-04-06 00:25:40: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:41: 覆盖复制 'D:/Project/node/clipro1/dist/static/js/8.2a7ac79761ddcaf52164.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/8.2a7ac79761ddcaf52164.js.map'
+2018-04-06 00:25:41: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:42: 新建复制 'D:/Project/node/clipro1/dist/static/js/9.a9bd733128ee4c5ff21d.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/9.a9bd733128ee4c5ff21d.js'
+2018-04-06 00:25:42: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:43: 新建复制 'D:/Project/node/clipro1/dist/static/js/9.a9bd733128ee4c5ff21d.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/9.a9bd733128ee4c5ff21d.js.map'
+2018-04-06 00:25:43: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:44: 新建复制 'D:/Project/node/clipro1/dist/static/js/app.c1f7983d6f9c07fe3230.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/app.c1f7983d6f9c07fe3230.js'
+2018-04-06 00:25:44: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:45: 新建复制 'D:/Project/node/clipro1/dist/static/js/app.c1f7983d6f9c07fe3230.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/app.c1f7983d6f9c07fe3230.js.map'
+2018-04-06 00:25:45: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:46: 新建复制 'D:/Project/node/clipro1/dist/static/js/manifest.60a6eb1b0dabd463bd6a.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/manifest.60a6eb1b0dabd463bd6a.js'
+2018-04-06 00:25:46: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:47: 新建复制 'D:/Project/node/clipro1/dist/static/js/manifest.60a6eb1b0dabd463bd6a.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/manifest.60a6eb1b0dabd463bd6a.js.map'
+2018-04-06 00:25:47: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:48: 覆盖复制 'D:/Project/node/clipro1/dist/static/js/qrcode.min.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/qrcode.min.js'
+2018-04-06 00:25:48: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:49: 新建复制 'D:/Project/node/clipro1/dist/static/js/vendor.4769529164dc9bfba1cf.js' -> 'ftps://oucolab.cn/public/newver/dist/static/js/vendor.4769529164dc9bfba1cf.js'
+2018-04-06 00:25:49: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:51: 新建复制 'D:/Project/node/clipro1/dist/static/js/vendor.4769529164dc9bfba1cf.js.map' -> 'ftps://oucolab.cn/public/newver/dist/static/js/vendor.4769529164dc9bfba1cf.js.map'
+2018-04-06 00:25:51: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:52: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:52: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:53: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:54: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-06 00:25:55: == 同步完成. 历时: 00:01:09, 速度: 49.7 KB/s, 完成: 81, 错误: 
+2018-04-06 00:25:55: 

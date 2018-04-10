@@ -1,0 +1,49 @@
+2018-04-05 00:02:41: On File Change Monitoring started on file:///D:/Project/node/clipro1
+2018-04-05 00:02:44: File Monitoring not available on: ftps://oucolab.cn/public/newver
+2018-04-05 00:02:44: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:45: -- 分析开始 On File Change First Full Analyze Upon File Monitoring Start
+2018-04-05 00:02:45: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:45: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:45: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:46: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:46: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:46: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:46: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:46: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:47: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:47: 变更：71， 冲突：， 复制时间：， 复制状态：， 错误： , All: 426
+2018-04-05 00:02:47: Left to Right: Copy File: 47 Delete File: 24 
+2018-04-05 00:02:47: == 同步开始由 On File Change First Full Analyze Upon File Monitoring Start
+2018-04-05 00:02:47: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:47: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/css/app.59bd0bfdab41e892c3e759862714337d.css'
+2018-04-05 00:02:47: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/css/app.59bd0bfdab41e892c3e759862714337d.css.map'
+2018-04-05 00:02:47: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/0.fc9c474ef6dc2c55285f.js'
+2018-04-05 00:02:47: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/0.fc9c474ef6dc2c55285f.js.map'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/1.04b0ae9c0c05c08043df.js'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/1.04b0ae9c0c05c08043df.js.map'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/2.72c29320bf19321806ec.js'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/2.72c29320bf19321806ec.js.map'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/3.9d1f5cb9efe9a6eaf31a.js'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/3.9d1f5cb9efe9a6eaf31a.js.map'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/4.b6a18a6eabf4e8d20775.js'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/4.b6a18a6eabf4e8d20775.js.map'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/5.7d2dc21bee3a8ddcd10b.js'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/5.7d2dc21bee3a8ddcd10b.js.map'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/6.9f35b49d26cebb412db6.js'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/6.9f35b49d26cebb412db6.js.map'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/7.8464fcce2fe5977a74ca.js'
+2018-04-05 00:02:48: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/7.8464fcce2fe5977a74ca.js.map'
+2018-04-05 00:02:49: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/app.a988a327520dcac60f92.js'
+2018-04-05 00:02:49: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/app.a988a327520dcac60f92.js.map'
+2018-04-05 00:02:49: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/manifest.9793db57028c03ca19a8.js'
+2018-04-05 00:02:49: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/manifest.9793db57028c03ca19a8.js.map'
+2018-04-05 00:02:49: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/vendor.b7dd64b86d38252886e6.js'
+2018-04-05 00:02:49: 删除文件 'ftps://oucolab.cn/public/newver/dist/static/js/vendor.b7dd64b86d38252886e6.js.map'
+2018-04-05 00:02:49: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:50: 覆盖复制 'D:/Project/node/clipro1/dist/index.html' -> 'ftps://oucolab.cn/public/newver/dist/index.html'
+2018-04-05 00:02:50: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:50: Stop requested by Stop By User: #1
+2018-04-05 00:02:50: 新建复制 'D:/Project/node/clipro1/dist/static/css/app.92e4fb57fa2f6c2e17b2235962c24cf2.css' -> 'ftps://oucolab.cn/public/newver/dist/static/css/app.92e4fb57fa2f6c2e17b2235962c24cf2.css'
+2018-04-05 00:02:50: DownUpLoadFileStart: bIsDataConnPvt != bIsContConnPvt: PASV returned 172.19.182.107, use server 106.14.177.156 instead
+2018-04-05 00:02:50: stopped by Stop By User
+2018-04-05 00:02:50: 
