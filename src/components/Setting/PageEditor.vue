@@ -44,7 +44,7 @@
       <div class="XFrame" v-if="XShow==true">
         <button class="close" @click="XShow=false">&times;</button>
         <!-- <iframe ref="xframe" src="http://xiumi.us/#/studio/papers"></iframe> -->
-        <iframe ref="xframe" src="http://xiumi.us/studio/v5#/paper"></iframe>
+        <iframe ref="xframe" src="https://xiumi.us/studio/v5#/paper"></iframe>
       </div>
     </transition>
   </div>

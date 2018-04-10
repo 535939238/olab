@@ -48,5 +48,8 @@ export default {
 
 <style lang='scss'>
 #PvTable {
+  table th{
+    text-align: center;
+  }
 }
 </style>
