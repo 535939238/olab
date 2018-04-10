@@ -119,7 +119,7 @@ export default {
       this.XShow = true;
     },
     XiuMiListener(event) {
-      if (event.origin == "http://xiumi.us") {
+      if (event.origin == "https://xiumi.us") {
         this.editor.txt.html(event.data);
         this.XShow = false;
       }
@@ -135,7 +135,7 @@ export default {
       if (val == true) {
         this.$nextTick(function() {
           var xiumi = this.$refs.xframe;
-          var xiumi_url = "http://xiumi.us";
+          var xiumi_url = "https://xiumi.us";
           xiumi.onload = function() {
             xiumi.contentWindow.postMessage("ready", xiumi_url);
           };
