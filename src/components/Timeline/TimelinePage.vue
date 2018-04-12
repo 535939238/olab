@@ -34,9 +34,9 @@
         <div v-for="(item,index) in applylist" :key="index" class="timewid" :style="TimeWidStyle(item)" @mouseover="fcat=index" @mouseout="fcat=false">
           <div class="tophandler"></div>
           <template v-if="item.density==99">
-            <h5>-活动名称-</h5>
+            <h5 class="hidden-xs">-活动名称-</h5>
             <h5>{{item.groups[0].actname}}</h5>
-            <h5>-活动单位</h5>
+            <h5 class="hidden-xs">-活动单位</h5>
             <h5>{{item.groups[0].unit}}</h5>
           </template>
           <template v-else>
@@ -362,6 +362,9 @@ $days: 7;
         margin-bottom: 0;
         &:nth-child(3) {
           margin-bottom: 10px;
+        }
+        @media (max-width: 767px) {
+          font-size: 8px;
         }
       }
       > .tophandler {
