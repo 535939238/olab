@@ -10,7 +10,7 @@ var router = new Router({
       beforeEnter: (to, from, next) => {
         window.location = to.fullPath.substr(1)
       }
-    },    
+    },
     {
       path: '*',
       redirect: { path: '/err404' }
@@ -72,7 +72,7 @@ var router = new Router({
     {
       path: '/agreement',
       component: resolve => require(['@/components/Others/Agreement'], resolve)
-    },    
+    },
     {
       path: '/setting',
       redirect: '/setting/main'
@@ -98,7 +98,7 @@ var router = new Router({
           component: resolve => require(['@/components/Setting/Menu'], resolve)
         }
       ]
-    }
+    },
   ]
 })
 

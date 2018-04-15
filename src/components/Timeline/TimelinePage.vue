@@ -60,81 +60,81 @@
         </transition>
       </div>
     </div>
-    <div class="col-sm-6 col-sm-offset-3 col-xs-12 input-group" style="margin-top: 10px;">
-      <span class="input-group-addon">从</span>
-      <select class="form-control" v-model="year">
-        <option v-for="val in opt_year" :key="val">{{val}}</option>
-      </select>
-      <span class="input-group-addon">-</span>
-      <select class="form-control" v-model="month">
-        <option v-for="val in opt_month" :key="val">{{val}}</option>
-      </select>
-      <span class="input-group-addon">-</span>
-      <select class="form-control" v-model="date">
-        <option v-for="val in opt_date" :key="val">{{val}}</option>
-      </select>
-    </div>
-    <button class="btn btn-warning col-sm-2 col-sm-offset-5 col-xs-12" style="margin-top:10px;" :disabled="date==''||year==''||month==''" @click="Query">查询</button>
+    <vueSlider v-bind="datedemo" v-model="datedemo.value" />
     <div class="row"></div>
   </div>
 </template>
 
 <script>
+import vueSlider from "vue-slider-component";
 export default {
   name: "",
+  components: {
+    vueSlider
+  },
   data() {
     var date = new Date();
     return {
-      year: date.getFullYear(),
-      month: date.getMonth() + 1,
-      date: date.getDate(),
       top: [],
       applylist: [],
       fcat: false,
       boxStyle: {
         left: "0px",
         top: "0px"
+      },
+      datedemo: {
+        value: "default",
+        tooltip: "always",
+        disabled: false,
+        piecewise: true,
+        lazy: true,
+        data: [],
+        fixed: true,
+        processDragable: true,
+        tooltipStyle: {
+          backgroundColor: "#f87b0d",
+          borderColor: "#e34225"
+        },
+        processStyle:{
+          backgroundColor: "#f87b0d",
+        }
       }
     };
   },
   computed: {
-    opt_year() {
-      var date = new Date();
-      if (date.getMonth() > 10)
-        return ["", date.getFullYear(), date.getFullYear() + 1];
-      else return ["", date.getFullYear()];
-    },
-    opt_month() {
-      var date = new Date();
-      if (this.year == date.getFullYear())
-        if (date.getMonth() == 11) return ["", 12];
-        else return ["", date.getMonth() + 1, date.getMonth() + 2];
-    },
-    opt_date() {
-      var date = new Date();
-      var arr = [""];
-      function getDayOfMonth(month) {
-        return new Date(
-          this.getFullYear(),
-          month ? month : this.getMonth() + 1,
-          0
-        ).getDate();
+    date() {
+      return "20" + this.datedemo.value[0].replace(/-/g, "/");
+    }
+  },
+  watch: {
+    date(val) {
+      var bdate = new Date(this.date);
+      var begindate = "20" + this.datedemo.value[0];
+      var enddate = new Date(+bdate + 7 * 86400 * 1000);
+      enddate = `${enddate.getFullYear()}-${enddate.getMonth() +
+        1}-${enddate.getDate()}`;
+      axios
+        .get(`/index/timelinefor?datefrom=${begindate}&dateto=${enddate}`)
+        .then(res => {
+          this.Convert(res.data);
+        });
+      var newtop = [];
+      for (var i = 0; i < 7; ++i) {
+        newtop.push({
+          day: ["日", "一", "二", "三", "四", "五", "六"][bdate.getDay()],
+          date: `${bdate.getMonth() + 1}.${bdate.getDate()}`
+        });
+        bdate = new Date(+bdate + 24 * 3600000);
       }
-      for (
-        var i = this.month == date.getMonth() + 1 ? date.getDate() : 1;
-        i <= getDayOfMonth.call(date, this.month);
-        ++i
-      )
-        arr.push(i);
-      return arr;
+      this.top = newtop;
     }
   },
   methods: {
     Convert(data) {
-      var bdate = new Date(`${this.year}/${this.month}/${this.date}`);
+      var bdate = new Date(this.date);
       this.applylist = [];
       data.forEach(ele => {
-        ele.date = new Date(ele.date.replace("-", "/"));
+        ele.date = new Date(ele.date.replace(/-/g, "/"));
         var dayleft = (ele.date - bdate) / (3600000 * 24);
         ele.grouplist = JSON.parse(ele.grouplist);
         ele.timeline = JSON.parse(ele.timeline);
@@ -183,27 +183,6 @@ export default {
         }
       });
     },
-    Query() {
-      var bdate = new Date(`${this.year}/${this.month}/${this.date}`);
-      var begindate = `${this.year}-${this.month}-${this.date}`;
-      var enddate = new Date(+bdate + 7 * 86400 * 1000);
-      enddate = `${enddate.getFullYear()}-${enddate.getMonth() +
-        1}-${enddate.getDate()}`;
-      axios
-        .get(`/index/timelinefor?datefrom=${begindate}&dateto=${enddate}`)
-        .then(res => {
-          this.Convert(res.data);
-        });
-      var newtop = [];
-      for (var i = 0; i < 7; ++i) {
-        newtop.push({
-          day: ["日", "一", "二", "三", "四", "五", "六"][bdate.getDay()],
-          date: `${bdate.getMonth() + 1}.${bdate.getDate()}`
-        });
-        bdate = new Date(+bdate + 24 * 3600000);
-      }
-      this.top = newtop;
-    },
     Hour24Conv(time) {
       return Math.floor(8 + (time - 1) / 2);
     },
@@ -249,7 +228,18 @@ export default {
   },
 
   mounted() {
-    this.Query();
+    var date = +new Date();
+    var dateSeleteOptions = [];
+    for (var i = 0; i < 14; ++i) {
+      var ndate = new Date(date);
+      dateSeleteOptions.push(
+        `${ndate.getFullYear() - 2000}-${ndate.getMonth() +
+          1}-${ndate.getDate()}`
+      );
+      date += 24 * 3600 * 1000;
+    }
+    this.datedemo.value = [dateSeleteOptions[0], dateSeleteOptions[6]];
+    this.datedemo.data = dateSeleteOptions;
   }
 };
 </script>
@@ -420,8 +410,8 @@ $days: 7;
       }
     }
   }
-  .input-group-addon {
-    border: 0;
+  .vue-slider-component {
+    margin-top: 35px;
   }
 }
 </style>

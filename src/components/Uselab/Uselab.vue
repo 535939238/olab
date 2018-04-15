@@ -47,6 +47,9 @@ export default {
       });
     },
     AddApply: function() {
+      if(this.$store.User.user === fasle){
+        modal.ShowLogin();
+      }
       axios.get("/index/addapply").then(
         function(res) {
           if (res.data.state == true) {

@@ -160,7 +160,7 @@ export default {
           toolbar.children[toolbar.children.length - 1].addEventListener(
             "click",
             function() {
-              if (window.setClipBoard(this.txt.html()))
+              if (modal.$common.setClipBoard(this.txt.html()))
                 modal.Show({
                   contains: `复制html到剪贴板成功!`
                 });

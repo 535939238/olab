@@ -1,6 +1,6 @@
 <template>
   <div id="Carousel" class="carousel">
-    <div class="carousel-inner" :style="{height:height}">
+    <div class="carousel-inner" ref="carouselinner">
       <transition :name="dir?'carousel':'carouselrev'">
         <div class="item active" v-for="(item,index) in items" v-if="index==at" :key="index" :style="'background-image:url('+item.image+');'" @click="$emit('select',item,index)">
           <div class="carousel-caption">
@@ -25,19 +25,18 @@
 <script>
 export default {
   name: "",
-  props:{
-    items:{
-      default(){
-        return []
+  props: {
+    items: {
+      default() {
+        return [];
       }
     }
   },
   data() {
-    return {      
+    return {
       at: 0,
       dir: true,
-      timer: undefined,
-      height: "500px"
+      timer: undefined
     };
   },
   methods: {
@@ -45,7 +44,7 @@ export default {
       var conv = document.body.clientWidth * 0.63 + 50;
       if (conv > 735) conv = "735px";
       else conv += "px";
-      this.height = conv;
+      this.$refs.carouselinner.style.height = conv;
     }
   },
   watch: {
@@ -69,9 +68,7 @@ export default {
       this.at++;
     }, 5000);
     window.addEventListener("resize", this.resizeEvent);
-    var e = document.createEvent("HTMLEvents");
-    e.initEvent("resize", true, true);
-    window.dispatchEvent(e);
+    this.$common.trigEvent("resize");
   },
   destroyed() {
     clearInterval(this.timer);

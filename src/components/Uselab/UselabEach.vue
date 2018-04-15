@@ -48,39 +48,15 @@
     <span class="label label-default">活动简介</span>
     <textarea rows="4" class="form-control" v-model="apply.acttype" placeholder="最多50字"></textarea>
     <span class="label label-default">使用日期</span>
-    <div class="input-group">
+    <vueSlider v-bind="datedemo" v-model="datedemo.value" />   
+    <span class="label label-default">使用时间</span>
+    <vueSlider v-bind="timedemo" v-model="timedemo.value" />
 
-    </div>
-    <div class="input-group">
-      <select class="form-control" v-model="apply.date_year">
-        <option v-for="year in opt_year" :key="year">{{ year }}</option>
-      </select>
-      <span class="input-group-addon">-</span>
-      <select class="form-control" v-model="apply.date_month">
-        <option v-for="month in opt_month" :key="month">{{ month }}</option>
-      </select>
-      <span class="input-group-addon">-</span>
-      <select class="form-control" v-model="apply.date_date">
-        <option v-for="date in opt_date" :key="date">{{ date }}</option>
-      </select>
-    </div>
-    <div class="choosetime">
-      <span class="label label-default">彩排时间</span>
-      <TimeChooser :time="apply.ctime" :begin="'7:30'" :end="'20:00'" @time="apply.ctime=arguments[0]"></TimeChooser>
-    </div>
-    <div class="choosetime">
-      <span class="label label-default">开始时间</span>
-      <TimeChooser :time="apply.btime" :begin="apply.ctime" :end="'20:30'" @time="apply.btime=arguments[0]"></TimeChooser>
-    </div>
-    <div class="choosetime">
-      <span class="label label-default">结束时间</span>
-      <TimeChooser :time="apply.etime" :begin="apply.btime" :end="'21:00'" @time="apply.etime=arguments[0]"></TimeChooser>
-    </div>
     <div class="row" style="margin-bottom: 10px;margin-top: 10px">
       <div class="btn btn-info col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4" onclick="modal.ShowTimeTable()">点我查看时刻表</div>
     </div>
     <span class="label label-default">活动人数</span>
-    <input type="number" class="form-control" v-model="apply.actpeo" placeholder="不超过80人">
+    <vueSlider v-model="apply.actpeo" :min="1" :max="80" />
     <span class="label label-default">活动流程</span>
     <textarea rows="10" class="form-control" v-model="apply.process"></textarea>
     <span class="label label-default">安全预案</span>
@@ -130,51 +106,46 @@
 </template>
 
 <script>
-import TimeChooser from "./TimeChooser";
+import vueSlider from "vue-slider-component";
 export default {
   name: "",
-  components: {
-    TimeChooser
+  components: {    
+    vueSlider
   },
   props: ["id"],
   data() {
     return {
-      apply: {}
-    };
-  },
-  computed: {
-    opt_year() {
-      var date = new Date();
-      if (date.getMonth() > 10)
-        return ["", date.getFullYear(), date.getFullYear() + 1];
-      else return ["", date.getFullYear()];
-    },
-    opt_month() {
-      var date = new Date();
-      if (this.apply.date_year == date.getFullYear())
-        if (date.getMonth() == 11) return ["", 12];
-        else return ["", date.getMonth() + 1, date.getMonth() + 2];
-    },
-    opt_date() {
-      var date = new Date();
-      var arr = [""];
-      function getDayOfMonth(month) {
-        return new Date(
-          this.getFullYear(),
-          month ? month : this.getMonth() + 1,
-          0
-        ).getDate();
+      apply: {},
+      datedemo: {
+        value: "default",
+        tooltip: "always",
+        disabled: false,
+        piecewise: true,
+        piecewiseLabel: true,
+        data: [],
+        piecewiseStyle: {
+          backgroundColor: "#ccc",
+          visibility: "visible",
+          width: "12px",
+          height: "12px"
+        },
+        piecewiseActiveStyle: {
+          backgroundColor: "#3498db"
+        },
+        labelActiveStyle: {
+          color: "#3498db"
+        }
+      },
+      timedemo: {
+        value: ["8:00", "9:00"],
+        tooltip: "always",
+        piecewise: true,
+        data: [],
+        piecewiseActiveStyle: {
+          backgroundColor: "#3498db"
+        }
       }
-      for (
-        var i =
-          this.apply.date_month == date.getMonth() + 1 ? date.getDate() : 1;
-        i <= getDayOfMonth.call(date, this.apply.date_month);
-        ++i
-      )
-        arr.push(i);
-        this.apply.date_date = arr[0];
-      return arr;
-    }
+    };
   },
   methods: {
     SubmitApply(submit) {
@@ -185,12 +156,11 @@ export default {
         return;
       }
       var senddata = JSON.parse(JSON.stringify(this.apply));
-      var datestr = `${senddata.date_year}/${senddata.date_month}/${
-        senddata.date_date
-      } `;
-      senddata.ctime = new Date(datestr + senddata.ctime) / 1000;
-      senddata.btime = new Date(datestr + senddata.btime) / 1000;
-      senddata.etime = new Date(datestr + senddata.etime) / 1000;
+      var datestr = "20" + this.datedemo.value.replace(/-/g, "/") + " ";
+      senddata.ctime = new Date(datestr + this.timedemo.value[0]) / 1000;
+      // senddata.btime = new Date(datestr + senddata.btime) / 1000;
+      senddata.etime = new Date(datestr + this.timedemo.value[1]) / 1000;
+      debugger;
       axios
         .post(
           `/index/changereq/id/${this.id}${submit == true ? "?submit=1" : ""}`,
@@ -234,47 +204,68 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit('ChangeHolding',true);
+    this.$store.commit("ChangeHolding", true);
     axios.get(`/index/applyeach/id/${this.id}`).then(res => {
-      var adata = res.data;
-      var applydate = new Date(adata.ctime * 1000);
-      adata.date_year = applydate.getFullYear();
-      adata.date_month = applydate.getMonth() + 1;
-      adata.date_date = applydate.getDate();
+      var dateTimeStamp = +new Date() + 7 * 3600 * 24 * 1000; //七天
+      var dateSelectOptions = [];
+      for (var i = 0; i < 7; ++i) {
+        var date = new Date(dateTimeStamp);
+        dateSelectOptions.push(
+          `${date.getFullYear() - 2000}-${date.getMonth() +
+            1}-${date.getDate()}`
+        );
+        dateTimeStamp += 86400000; //一天
+      }
+      this.datedemo.data = dateSelectOptions;
+      this.$common.trigEvent("resize");
+
+      var timeSelectOptions = [];
+      for (var i = 16; i < 43; ++i) {
+        timeSelectOptions.push(Math.floor(i / 2) + (i % 2 ? ":30" : ":00"));
+      }
+      this.timedemo.data = timeSelectOptions;
+      this.timedemo.value = [timeSelectOptions[0], timeSelectOptions[1]];
 
       function toTime(a) {
-        return `${a.getHours()}:${
-          a.getMinutes() < 10 ? `0${a.getMinutes()}` : a.getMinutes()
-        }`;
+        return a.getHours() + (a.getMinutes() < 10 ? ":00" : ":30");
       }
-      adata.ctime = toTime(applydate);
-      applydate = new Date(adata.btime * 1000);
-      adata.btime = toTime(applydate);
-      applydate = new Date(adata.etime * 1000);
-      adata.etime = toTime(applydate);
+      var adata = res.data;
+      var applyctime = new Date(adata.ctime * 1000);
+      var applyctimestr = toTime(applyctime);
+      var applyetimestr = toTime(new Date(adata.etime * 1000));
+      this.datedemo.value = `${applyctime.getFullYear() -
+        2000}-${applyctime.getMonth() + 1}-${applyctime.getDate()}`;
+
+      if(this.datedemo.data.indexOf(this.datedemo.value) == -1)
+        if(adata.state == 3)
+          this.datedemo.data.unshift(this.datedemo.value);
+        else this.datedemo.value = this.datedemo.data[0];
+      
+      this.timedemo.value = [applyctimestr, applyetimestr];
       this.apply = res.data;
     });
   },
-  beforeDestroy(){
-    this.$store.commit('ChangeHolding',false);
+  beforeDestroy() {
+    this.$store.commit("ChangeHolding", false);
   }
 };
 </script>
 
 <style lang='scss'>
 #UselabEach {
-  .choosetime {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    .label {
-      margin-right: 20px;
-    }
-    .TimeChooser {
-      flex-grow: 1;
+  .vue-slider-component {
+    margin-top: 35px;
+    margin-bottom: 30px;
+    width: 80% !important;
+    margin-left: 10%;
+    @media (max-width: 767px) {
+      width: 90% !important;
+      margin-left: 5%;
+      .vue-slider-piecewise-label {
+        font-size: 3.5px;
+      }
     }
   }
-
   .checkuni {
     display: flex;
     align-items: center;

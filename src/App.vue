@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <input type="text" id="copyboard" ref="copyboard">
+  <div id="app">    
     <div id="bgdiv">
       <div></div>
       <div></div>
@@ -48,22 +47,7 @@ export default {
   },
   mounted() {
     new WOW().init();
-    this.InitAjax();
-    window.setClipBoard = ele => {
-      if (ele instanceof HTMLElement) ele = ele.innerHTML;
-      var inp = this.$refs.copyboard;
-      inp.value = ele;
-      inp.select();
-      try {
-        document.execCommand("copy");
-        return true;
-      } catch (error) {
-        modal.Show({
-          contains: `您的浏览器不支持复制操作！请换个浏览器(推荐: 360 uc)`
-        });
-        return false;
-      }
-    };
+    this.InitAjax();    
   }
 };
 </script>
@@ -74,11 +58,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  #copyboard {
-    position: absolute;
-    left: -100%;
-  }
+  color: #2c3e50;  
   #bgdiv {
     height: 300px;
     background: url(/static/images/bg2.jpg);
