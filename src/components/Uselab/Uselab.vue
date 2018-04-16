@@ -47,19 +47,19 @@ export default {
       });
     },
     AddApply: function() {
-      if(this.$store.User.user === fasle){
+      if (this.$store.state.User.user === false) {
         modal.ShowLogin();
-      }
-      axios.get("/index/addapply").then(
-        function(res) {
-          if (res.data.state == true) {
-            this.applylist.push({
-              id: res.data.mes,
-              state: 0
-            });
-          } else modal.Common(res);
-        }.bind(this)
-      );
+      } else
+        axios.get("/index/addapply").then(
+          function(res) {
+            if (res.data.state == true) {
+              this.applylist.push({
+                id: res.data.mes,
+                state: 0
+              });
+            } else modal.Common(res);
+          }.bind(this)
+        );
     }
   },
   mounted() {

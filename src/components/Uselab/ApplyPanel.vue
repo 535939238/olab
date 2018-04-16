@@ -54,7 +54,7 @@ export default {
 };
 </script>
 
-<style lang='scss' scoped>
+<style lang='scss'>
 .ApplyPanel {
   border: 0;
   box-shadow: 6px 6px 17px rgba(54, 54, 54, 0.3);

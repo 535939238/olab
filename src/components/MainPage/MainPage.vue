@@ -49,9 +49,7 @@ export default {
 
   #TimelineContainer {
     margin-bottom: 20px;
-    p.pretitle,
-    .input-group,
-    .btn {
+    p.pretitle {
       display: none;
     }
   }

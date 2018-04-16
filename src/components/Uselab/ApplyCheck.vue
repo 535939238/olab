@@ -98,7 +98,7 @@ export default {
 
 <style lang='scss'>
 #ApplyCheck {
-  width: 100%;
+  width: 100% !important;
   .btncon {
     .btn {
       margin-bottom: 10px;

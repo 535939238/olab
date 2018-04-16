@@ -3,6 +3,12 @@
     <button class="close" @click="$emit('goback')">&times;</button>
     <p class="pretitle">O-Lab场地使用申请表</p>
     <h4 style="text-align: center">申请单编号:{{id}}</h4>
+    <div class="list-group" v-if="apply.state==3">
+      <a class="list-group-item active">
+        <h4 class="list-group-item-heading">未通过原因</h4>
+        <p class="list-group-item-text">{{apply.reason}}</p>
+      </a>
+    </div>    
     <span class="label label-default">申请人</span>
     <input type="text" class="form-control" v-model="apply.name">
     <span class="label label-default">学号</span>
@@ -56,7 +62,7 @@
       <div class="btn btn-info col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4" onclick="modal.ShowTimeTable()">点我查看时刻表</div>
     </div>
     <span class="label label-default">活动人数</span>
-    <vueSlider v-model="apply.actpeo" :min="1" :max="80" />
+    <vueSlider v-model="apply.actpeo" :min="1" :max="80" :realTime="true"/>
     <span class="label label-default">活动流程</span>
     <textarea rows="10" class="form-control" v-model="apply.process"></textarea>
     <span class="label label-default">安全预案</span>
@@ -122,6 +128,7 @@ export default {
         disabled: false,
         piecewise: true,
         piecewiseLabel: true,
+        realTime: true,
         data: [],
         piecewiseStyle: {
           backgroundColor: "#ccc",
@@ -141,6 +148,7 @@ export default {
         tooltip: "always",
         piecewise: true,
         data: [],
+        realTime: true,
         piecewiseActiveStyle: {
           backgroundColor: "#3498db"
         }
@@ -159,8 +167,7 @@ export default {
       var datestr = "20" + this.datedemo.value.replace(/-/g, "/") + " ";
       senddata.ctime = new Date(datestr + this.timedemo.value[0]) / 1000;
       // senddata.btime = new Date(datestr + senddata.btime) / 1000;
-      senddata.etime = new Date(datestr + this.timedemo.value[1]) / 1000;
-      debugger;
+      senddata.etime = new Date(datestr + this.timedemo.value[1]) / 1000;      
       axios
         .post(
           `/index/changereq/id/${this.id}${submit == true ? "?submit=1" : ""}`,
@@ -216,8 +223,7 @@ export default {
         );
         dateTimeStamp += 86400000; //一天
       }
-      this.datedemo.data = dateSelectOptions;
-      this.$common.trigEvent("resize");
+      this.datedemo.data = dateSelectOptions;            
 
       var timeSelectOptions = [];
       for (var i = 16; i < 43; ++i) {
@@ -242,7 +248,7 @@ export default {
         else this.datedemo.value = this.datedemo.data[0];
       
       this.timedemo.value = [applyctimestr, applyetimestr];
-      this.apply = res.data;
+      this.apply = res.data;      
     });
   },
   beforeDestroy() {
@@ -253,6 +259,7 @@ export default {
 
 <style lang='scss'>
 #UselabEach {
+  width: 100%;
   .vue-slider-component {
     margin-top: 35px;
     margin-bottom: 30px;
