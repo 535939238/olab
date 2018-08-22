@@ -7,7 +7,7 @@
       </div>
     </template>
     <template v-else>
-      <div class="logincode" key="2"></div>
+      <div class="logincode" key="2" :class="{show}"></div>
       <h3>请使用微信扫一扫登录</h3>
       <h3>(或在微信客户端中打开)</h3>
     </template>
@@ -15,12 +15,13 @@
 </template>
 
 <script>
-import('@/assets/qrcode.min.js')
+import QRCode from "@/assets/qrcode.js";
 export default {
   name: "",
   data() {
     return {
-      timer: false
+      timer: false,
+      show: false
     };
   },
   methods: {
@@ -28,7 +29,10 @@ export default {
       axios.get("/index/logout").then(() => {
         this.$store.commit("Logout");
         this.$nextTick(res => {
-          if(window.navigator.userAgent.match(/MicroMessenger/i) == "MicroMessenger")
+          if (
+            window.navigator.userAgent.match(/MicroMessenger/i) ==
+            "MicroMessenger"
+          )
             modal.show = false;
           else this.AddCode();
         });
@@ -36,7 +40,7 @@ export default {
     },
     AddCode() {
       var MakeCode = function() {
-        axios.get("/index/gettoken").then(res => {          
+        axios.get("/index/gettoken").then(res => {
           new QRCode(this.$el.querySelector(".logincode"), {
             text: `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${
               this.$store.state.appid
@@ -49,6 +53,7 @@ export default {
             colorLight: "#ffffff",
             correctLevel: QRCode.CorrectLevel.H
           });
+          this.show = true;
         });
       }.bind(this);
       /*if (!window.QRCode)
@@ -57,7 +62,7 @@ export default {
           MakeCode();
           //这是骚操作
         });
-      else */MakeCode();
+      else */ MakeCode();
       this.timer = window.setInterval(() => {
         axios.get("/index/checklogin").then(res => {
           if (res.data.state == true) {
@@ -87,10 +92,17 @@ export default {
 <style lang='scss'>
 #LoginComp {
   text-align: center;
-  .logincode img {
-    display: inline !important;    
+  .logincode {
+    height: 256px;
+    opacity: 0;
+    &.show {
+      opacity: 1;
+    }
+    img {
+      display: inline !important;
+    }
   }
-  .headimg{
+  .headimg {
     height: 256px;
     margin-bottom: 10px;
   }
