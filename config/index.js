@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/': {
-        target: 'http://localhost:83/',
+        target: 'https://oucolab.cn',
         changeOrigin: true,        
       }
     },

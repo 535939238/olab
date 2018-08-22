@@ -110,6 +110,7 @@ export default {
   }
   .applyreview{
     overflow-x: auto;
+    max-height: 1570px;
   }
 }
 </style>

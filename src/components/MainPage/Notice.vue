@@ -25,10 +25,10 @@
 <script>
 export default {
   name: "",
-  props:{
-    items:{
-      default(){
-        return []
+  props: {
+    items: {
+      default() {
+        return [];
       }
     }
   },
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang='scss'>
-#Notice {  
+#Notice {
   @media (max-width: 767px) {
     background: #e9e9e9;
     padding-bottom: 50px;
@@ -50,19 +50,19 @@ export default {
     width: 100%;
     height: 158px;
     transform: translate(0, -30%);
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);    
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
     @media (max-width: 767px) {
       transform: translate(0, 0%);
       box-shadow: none;
       background: transparent;
     }
-    .activ-panel { 
-      @media (min-width: 768px){
+    .activ-panel {
+      @media (min-width: 768px) {
         width: 33.33%;
       }
-      float: left;      
-      height: 100%;      
+      float: left;
+      height: 100%;
       background: transparent;
       border-right: 1px solid #dfdfdf;
       position: relative;
@@ -71,12 +71,13 @@ export default {
       }
       &-img {
         position: absolute;
-        left: 25%;
-        top: 10%;
-        height: 50%;
-        width: 50%;
+        left: 0;
+        top: 0%;
+        height: 60%;
+        width: 100%;
         background-image: url(/static/images/bg2.jpg);
         background-size: cover;
+        background-position: center;  
       }
       &-contains {
         position: absolute;
@@ -100,17 +101,18 @@ export default {
           background: #e5e5e5;
           .activ-panel {
             &-img {
-              width: 90%;
-              height: 90%;
-              left: 5%;
-              top: 5%;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
             }
             &-contains {
               top: 15%;
-              width: 70%;
+              width: 85%;
               height: 70%;
-              background: rgba(255, 255, 255, 0.7);
+              background: rgba(0, 0, 0, 0.7);
               padding-top: 15px;
+              color: white;
               > .title {
                 font-size: 21px;
               }
@@ -125,14 +127,14 @@ export default {
         width: 100%;
         border-right: 0;
         background: #f3f3f3;
-        height: 200px;
+        height: 160px;
         margin-bottom: 5px;
         > .activ-panel {
           &-img {
             left: 5%;
             width: 40%;
-            height: 60%;
-            top: 20%;
+            height: 80%;
+            top: 10%;
           }
           &-contains {
             transform: translate(-50%, -50%);
@@ -142,10 +144,12 @@ export default {
             height: auto;
             text-align: left;
             > .title {
-              font-size: 27px;
+              font-size: 20px;
             }
             > .contains {
-              font-size: 20px;
+              font-size: 15px;
+              color: gray;
+              margin-left: 15px;
             }
           }
         }

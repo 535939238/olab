@@ -8,7 +8,7 @@
         <h4 class="list-group-item-heading">未通过原因</h4>
         <p class="list-group-item-text">{{apply.reason}}</p>
       </a>
-    </div>    
+    </div>
     <span class="label label-default">申请人</span>
     <input type="text" class="form-control" v-model="apply.name">
     <span class="label label-default">学号</span>
@@ -54,7 +54,7 @@
     <span class="label label-default">活动简介</span>
     <textarea rows="4" class="form-control" v-model="apply.acttype" placeholder="最多50字"></textarea>
     <span class="label label-default">使用日期</span>
-    <vueSlider v-bind="datedemo" v-model="datedemo.value" />   
+    <vueSlider v-bind="datedemo" v-model="datedemo.value" />
     <span class="label label-default">使用时间</span>
     <vueSlider v-bind="timedemo" v-model="timedemo.value" />
 
@@ -62,7 +62,7 @@
       <div class="btn btn-info col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4" onclick="modal.ShowTimeTable()">点我查看时刻表</div>
     </div>
     <span class="label label-default">活动人数</span>
-    <vueSlider v-model="apply.actpeo" :min="1" :max="80" :realTime="true"/>
+    <vueSlider v-model="apply.actpeo" :min="1" :max="80" :realTime="true" />
     <span class="label label-default">活动流程</span>
     <textarea rows="10" class="form-control" v-model="apply.process"></textarea>
     <span class="label label-default">安全预案</span>
@@ -115,7 +115,7 @@
 import vueSlider from "vue-slider-component";
 export default {
   name: "",
-  components: {    
+  components: {
     vueSlider
   },
   props: ["id"],
@@ -167,7 +167,7 @@ export default {
       var datestr = "20" + this.datedemo.value.replace(/-/g, "/") + " ";
       senddata.ctime = new Date(datestr + this.timedemo.value[0]) / 1000;
       // senddata.btime = new Date(datestr + senddata.btime) / 1000;
-      senddata.etime = new Date(datestr + this.timedemo.value[1]) / 1000;      
+      senddata.etime = new Date(datestr + this.timedemo.value[1]) / 1000;
       axios
         .post(
           `/index/changereq/id/${this.id}${submit == true ? "?submit=1" : ""}`,
@@ -213,9 +213,14 @@ export default {
   mounted() {
     this.$store.commit("ChangeHolding", true);
     axios.get(`/index/applyeach/id/${this.id}`).then(res => {
-      var dateTimeStamp = +new Date() + 7 * 3600 * 24 * 1000; //七天
+      var maxi = 7;
+      var dateTimeStamp;
+      if (this.$store.state.User.sup.length) {
+        dateTimeStamp = +new Date();
+        maxi = 14;
+      } else dateTimeStamp = +new Date() + 7 * 3600 * 24 * 1000; //七天
       var dateSelectOptions = [];
-      for (var i = 0; i < 7; ++i) {
+      for (var i = 0; i < maxi; ++i) {
         var date = new Date(dateTimeStamp);
         dateSelectOptions.push(
           `${date.getFullYear() - 2000}-${date.getMonth() +
@@ -223,7 +228,7 @@ export default {
         );
         dateTimeStamp += 86400000; //一天
       }
-      this.datedemo.data = dateSelectOptions;            
+      this.datedemo.data = dateSelectOptions;
 
       var timeSelectOptions = [];
       for (var i = 16; i < 43; ++i) {
@@ -242,13 +247,12 @@ export default {
       this.datedemo.value = `${applyctime.getFullYear() -
         2000}-${applyctime.getMonth() + 1}-${applyctime.getDate()}`;
 
-      if(this.datedemo.data.indexOf(this.datedemo.value) == -1)
-        if(adata.state == 3)
-          this.datedemo.data.unshift(this.datedemo.value);
+      if (this.datedemo.data.indexOf(this.datedemo.value) == -1)
+        if (adata.state == 3) this.datedemo.data.unshift(this.datedemo.value);
         else this.datedemo.value = this.datedemo.data[0];
-      
+
       this.timedemo.value = [applyctimestr, applyetimestr];
-      this.apply = res.data;      
+      this.apply = res.data;
     });
   },
   beforeDestroy() {
